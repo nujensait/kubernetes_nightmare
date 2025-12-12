@@ -227,6 +227,8 @@ Start-Process wsl -ArgumentList "kubectl port-forward -n kube-system svc/traefik
    - Password: `pass`
 4. Должен открыться веб-интерфейс Mongo Express
 
+![Mongo Express interface](images/screen1.jpg)
+
 ### 6.2. Тестирование через PowerShell
 
 ```powershell
@@ -254,6 +256,8 @@ Start-Process "http://localhost:8082/dashboard/"
 ```
 
 Ожидаемый результат: `200`
+
+![Traefic dashboard](images/screen2.jpg)
 
 ### 6.4. Проверка логов
 
@@ -412,7 +416,9 @@ wsl minikube delete
 
 ---
 
-**Примечание:** Данные в MongoDB хранятся в `emptyDir` и будут потеряны при удалении пода. Это соответствует требованиям задания **"Nightmare"**.
+**Примечание:** 
+Данные в MongoDB хранятся в `emptyDir` и будут потеряны при удалении пода. 
+Это соответствует требованиям задания **"Nightmare"**.
 
 ---
 
